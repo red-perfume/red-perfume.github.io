@@ -7,3 +7,4 @@ Website for the Red Perfume project
 * Getting started guide
 * About
   * "Why is it called Red Perfume"
+* Other parts of the Red Perfume Ecosystem
