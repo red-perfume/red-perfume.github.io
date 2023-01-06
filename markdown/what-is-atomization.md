@@ -114,7 +114,7 @@ export function AnExample () {
 
 During the atomization process, we are essentially looking for patterns and reducing repetition. The end result is that you send much less code. It is all highly dependent on the codebase, but most save around 60%-80%. If you are already pre-atomizing your code, with a tool like Tailwind, then expect to see savings closer to 10-20%. Red Perfume will always do a better job of atomizing your code than if you try to do it by hand, so you can feel free to write your code in any style you want, with any framework, and with any tooling.
 
-Most major tech websites (Google, Twitter, Facebook) will emplore some form of automated CSS atomization. When converting the Facebook.com homepage to use automated CSS atomization, they found it [reduced their homepage CSS by **80%**](https://engineering.fb.com/web/facebook-redesign).
+When converting the Facebook.com homepage to use automated CSS atomization, they found it [reduced their homepage CSS by **80%**](https://engineering.fb.com/web/facebook-redesign). In fact, most major tech websites (Google, Twitter, Facebook) employ this automated optimization technique.
 
 
 ## If the big tech companies are doing it, why isn't everyone else?
