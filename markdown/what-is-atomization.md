@@ -75,7 +75,7 @@ Because this is a build step, and the output doesn't need to be human readable, 
 <nav class="a b">Example</nav>
 ```
 
-And the classmap that is generated can even be used in your JavaScript.
+And the generated classmap can be used in your JavaScript.
 
 **Vue.js example:**
 
