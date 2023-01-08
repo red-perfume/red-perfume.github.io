@@ -1,3 +1,59 @@
+@property --button-bg1 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(0.00, 57.2%, 40.41%);
+}
+@property --button-bg2 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(5.10, 73.6%, 30.69%);
+}
+@property --button-bg3 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(6.80, 75.0%, 26.82%);
+}
+@property --button-bg4 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(7.20, 75.9%, 24.84%);
+}
+@property --button-bg5 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(8.60, 73.3%, 23.85%);
+}
+@property --button-bg6 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(8.50, 71.9%, 22.59%);
+}
+@property --button-bg7 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(9.90, 70.2%, 21.33%);
+}
+@property --button-bg8 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(10.9, 70.2%, 20.16%);
+}
+@property --button-bg9 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(12.3, 69.1%, 19.44%);
+}
+@property --button-bg10 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(12.7, 63.6%, 21.33%);
+}
+@property --button-bg11 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(15.2, 61.4%, 24.75%);
+}
+
 :root {
   --bg: hsl(0, 23%, 10%);
   --text: hsl(3, 70%, 75%);
@@ -12,6 +68,7 @@
   --hljs-text: hsl(324, 70%, 76%);
   --hljs-variable: var(--visited);
   --sans-serif: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'PT Sans', 'Open Sans', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --serif: 'Bodoni MT', 'Baskerville Old Face', 'Book Antiqua', 'Times New Roman';
   --source-sans-pro: 'Source Sans Pro', var(--sans-serif);
   --great-vibes: 'Great Vibes', 'Brush Script MT', var(--source-sans-pro);
 }
@@ -25,8 +82,10 @@ body {
   margin: 0px 0px 0px 310px;
   color: var(--text);
 }
-h1, h2, h3 {
-  font-family: var(--great-vibes);
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
 }
 h1 {
   font-size: 42px;
@@ -55,6 +114,89 @@ main {
 img {
   display: block;
   margin: 0px auto;
+}
+button {
+  --button-padding: 48px;
+  --button-satin: calc(var(--button-padding) - 12px);
+  --button-bg1: hsl(0.00, 57.2%, 40.41%);
+  --button-bg2: hsl(5.10, 73.6%, 30.69%);
+  --button-bg3: hsl(6.80, 75.0%, 26.82%);
+  --button-bg4: hsl(7.20, 75.9%, 24.84%);
+  --button-bg5: hsl(8.60, 73.3%, 23.85%);
+  --button-bg6: hsl(8.50, 71.9%, 22.59%);
+  --button-bg7: hsl(9.90, 70.2%, 21.33%);
+  --button-bg8: hsl(10.9, 70.2%, 20.16%);
+  --button-bg9: hsl(12.3, 69.1%, 19.44%);
+  --button-bg10: hsl(12.7, 63.6%, 21.33%);
+  --button-bg11: hsl(15.2, 61.4%, 24.75%);
+  position: relative;
+  height: 92px;
+  background: linear-gradient(
+    var(--button-bg1),
+    var(--button-bg2),
+    var(--button-bg3),
+    var(--button-bg4),
+    var(--button-bg5),
+    var(--button-bg6),
+    var(--button-bg7),
+    var(--button-bg8),
+    var(--button-bg9),
+    var(--button-bg10),
+    var(--button-bg11)
+  );
+  border: 0px solid #FFFFFF3B;
+  border-radius: 19px;
+  margin: 0px 20px 0px 0px;
+  padding: 0px var(--button-padding);
+  color: var(--text);
+  transition:
+    --button-bg1 1s,
+    --button-bg2 1s,
+    --button-bg3 1s,
+    --button-bg4 1s,
+    --button-bg5 1s,
+    --button-bg6 1s,
+    --button-bg7 1s,
+    --button-bg8 1s,
+    --button-bg9 1s,
+    --button-bg10 1s,
+    --button-bg11 1s;
+}
+button:hover {
+  --button-bg1: hsl(0.00, 57.2%, calc(40.41% * 1.4));
+  --button-bg2: hsl(5.10, 73.6%, calc(30.69% * 1.4));
+  --button-bg3: hsl(6.80, 75.0%, calc(26.82% * 1.4));
+  --button-bg4: hsl(7.20, 75.9%, calc(24.84% * 1.4));
+  --button-bg5: hsl(8.60, 73.3%, calc(23.85% * 1.4));
+  --button-bg6: hsl(8.50, 71.9%, calc(22.59% * 1.4));
+  --button-bg7: hsl(9.90, 70.2%, calc(21.33% * 1.4));
+  --button-bg8: hsl(10.9, 70.2%, calc(20.16% * 1.4));
+  --button-bg9: hsl(12.3, 69.1%, calc(19.44% * 1.4));
+  --button-bg10: hsl(12.7, 63.6%, calc(21.33% * 1.4));
+  --button-bg11: hsl(15.2, 61.4%, calc(24.75% * 1.4));
+}
+button:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  height: 100%;
+  width: var(--button-padding);
+  background: radial-gradient(circle var(--button-satin) at 0% 50%, #2e0000de, transparent);
+}
+button:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 100%;
+  width: var(--button-padding);
+  background: radial-gradient(circle var(--button-satin) at 100% 50%, #2e0000de, transparent);
+}
+button:last-of-type {
+  margin: 0px;
 }
 hr {
   width: 91%;
@@ -147,6 +289,10 @@ aside > ul > li > ul > li > ul {
 .logo {
   max-width: 170px;
   border-radius: 6px;
+}
+.main-title,
+.side-title {
+  font-family: var(--great-vibes);
 }
 .main-title {
   font-size: 52px;
