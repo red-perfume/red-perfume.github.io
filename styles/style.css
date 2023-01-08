@@ -131,7 +131,7 @@ button {
   --button-bg11: hsl(15.2, 61.4%, 24.75%);
   position: relative;
   height: 92px;
-  background: linear-gradient(
+  background: url('/imgs/noise.png'), linear-gradient(
     var(--button-bg1),
     var(--button-bg2),
     var(--button-bg3),
