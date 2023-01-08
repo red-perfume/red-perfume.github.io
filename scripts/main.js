@@ -29,7 +29,8 @@ function getAndInsertMarkdown (name) {
 async function loadData () {
   const promises = [];
   const markdown = [
-    'intro'
+    'intro',
+    'task-runner-api'
   ];
   markdown.forEach(function (name) {
     promises.push(getAndInsertMarkdown(name));
