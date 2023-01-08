@@ -4,17 +4,22 @@
   "description": "Website for the Red Perfume project.",
   "main": "index.html",
   "scripts": {
-    "start": "node node_modules/npm-free-server/dist/server.js"
+    "start": "serve -l 8000"
   },
   "devDependencies": {
-    "npm-free-server": "^1.1.0"
+    "serve": "^14.1.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/red-perfume/red-perfume.github.io.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "CSS",
+    "Atomization",
+    "Website",
+    "red-perfume"
+  ],
+  "author": "The Jared Wilcurt",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/red-perfume/red-perfume.github.io/issues"
