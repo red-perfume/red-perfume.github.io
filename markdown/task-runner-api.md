@@ -21,7 +21,8 @@ redPerfume.atomize({
         // The two above files will be concatenated and atomized then output to this file
         out: './dist/styles/styles.css'
       },
-      // The output markup will be a copy of the input but modified to have the class names replaced to match the new atomized styles in this task
+      // The output markup will be a copy of the input but modified to have the class names
+      // replaced to match the new atomized styles in this task
       markup: [
         {
           in: './index.html',
@@ -34,17 +35,18 @@ redPerfume.atomize({
       ],
       scripts: {
         // Design of this JSON file will change before v1.0.0.
-        // The point is to allow your JavaScript to reference a map of the original class name (key) and the atomized classes produced from it (value)
+        // The point is to allow your JavaScript to reference a map of the original class
+        // name (key) and the atomized classes produced from it (value)
         out: './dist/atomic-styles.json'
       }
     },
     {
       uglify: true,
       styles: {
-        // Instead of, or in addition to, using input files, you can also provide a string directly
+        // You can provide a string directly instead of (or in addition to) using input files
         data: '.example { padding: 10px; margin: 10px; }',
-        // There are many lifecycle hooks that can be used as callbacks at specific points in execution
-        // Useful for 3rd party plugins. Fully documented below.
+        // There are many lifecycle hooks that can be used as callbacks at specific points
+        // in execution. Useful for 3rd party plugins. Fully documented below.
         hooks: {
           afterOutput: function (options, { task, inputCss, atomizedCss, classMap, styleErrors }) {
             console.log({ options, task, inputCss, atomizedCss, classMap, styleErrors });
@@ -160,22 +162,42 @@ All the hooks are shown below. **Most users will only use the `afterOutput` hook
 redPerfume.atomize({
   hooks: {
     beforeValidation: function (options) {},
-    afterValidation:  function (options) {},
-    beforeTasks:      function (options) {},
-    afterTasks:       function (options, [{ task, inputCss, atomizedCss, classMap, allInputMarkup, allAtomizedMarkup, styleErrors, markupErrors, scriptErrors }]) {}
+    afterValidation: function (options) {},
+    beforeTasks: function (options) {},
+    afterTasks: function (options, [{
+      task,
+      inputCss,
+      atomizedCss,
+      classMap,
+      allInputMarkup,
+      allAtomizedMarkup,
+      styleErrors,
+      markupErrors,
+      scriptErrors
+    }]) {}
   },
   tasks: [
     {
       hooks: {
         beforeTask: function (options, { task }) {},
-        afterTask:  function (options, { task, inputCss, atomizedCss, classMap, allInputMarkup, allAtomizedMarkup, styleErrors, markupErrors, scriptErrors }) {}
+        afterTask: function (options, {
+          task,
+          inputCss,
+          atomizedCss,
+          classMap,
+          allInputMarkup,
+          allAtomizedMarkup,
+          styleErrors,
+          markupErrors,
+          scriptErrors
+        }) {}
       },
       styles: {
         hooks: {
           beforeRead:     function (options, { task }) {},
           afterRead:      function (options, { task, inputCss, styleErrors }) {},
-          afterProcessed: function (options, { task, inputCss, atomizedCss, classMap, styleErrors }) {},
-          afterOutput:    function (options, { task, inputCss, atomizedCss, classMap, styleErrors }) {}
+          afterProcessed: function (options, { task, inputCss, styleErrors, atomizedCss, classMap }) {},
+          afterOutput:    function (options, { task, inputCss, styleErrors, atomizedCss, classMap }) {}
         }
       },
       markup: [
@@ -183,8 +205,8 @@ redPerfume.atomize({
           hooks: {
             beforeRead:     function (options, { task, subTask, classMap }) {},
             afterRead:      function (options, { task, subTask, classMap, inputHtml, markupErrors }) {},
-            afterProcessed: function (options, { task, subTask, classMap, inputHtml, atomizedHtml, markupErrors }) {},
-            afterOutput:    function (options, { task, subTask, classMap, inputHtml, atomizedHtml, markupErrors }) {}
+            afterProcessed: function (options, { task, subTask, classMap, inputHtml, markupErrors, atomizedHtml }) {},
+            afterOutput:    function (options, { task, subTask, classMap, inputHtml, markupErrors, atomizedHtml }) {}
           }
         }
       ],

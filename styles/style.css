@@ -1,3 +1,4 @@
+/* These are required to allow Gradient animation in Chrome */
 @property --button-bg1 {
   syntax: '<color>';
   inherits: false;
@@ -61,7 +62,8 @@
   --side: hsl(352, 48%, 26%);
   --link: hsl(0, 62%, 46%);
   --visited: hsl(350, 62%, 46%);
-  --hljs-attribute: hsl(22, 33%, 64%);
+  --button-text: hsl(22, 33%, 64%);
+  --hljs-attribute: var(--button-text);
   --hljs-bg: hsl(0, 5%, 13.3%);
   --hljs-comment: hsl(305, 14%, 46.7%);
   --hljs-string: hsl(332, 53%, 40%);
@@ -71,6 +73,12 @@
   --serif: 'Bodoni MT', 'Baskerville Old Face', 'Book Antiqua', 'Times New Roman';
   --source-sans-pro: 'Source Sans Pro', var(--sans-serif);
   --great-vibes: 'Great Vibes', 'Brush Script MT', var(--source-sans-pro);
+}
+
+*,
+*:before
+*:after {
+  box-sizing: border-box;
 }
 
 /* Tags */
@@ -115,88 +123,13 @@ img {
   display: block;
   margin: 0px auto;
 }
-button {
-  --button-padding: 48px;
-  --button-satin: calc(var(--button-padding) - 12px);
-  --button-bg1: hsl(0.00, 57.2%, 40.41%);
-  --button-bg2: hsl(5.10, 73.6%, 30.69%);
-  --button-bg3: hsl(6.80, 75.0%, 26.82%);
-  --button-bg4: hsl(7.20, 75.9%, 24.84%);
-  --button-bg5: hsl(8.60, 73.3%, 23.85%);
-  --button-bg6: hsl(8.50, 71.9%, 22.59%);
-  --button-bg7: hsl(9.90, 70.2%, 21.33%);
-  --button-bg8: hsl(10.9, 70.2%, 20.16%);
-  --button-bg9: hsl(12.3, 69.1%, 19.44%);
-  --button-bg10: hsl(12.7, 63.6%, 21.33%);
-  --button-bg11: hsl(15.2, 61.4%, 24.75%);
-  position: relative;
-  height: 92px;
-  background: url('/imgs/noise.png'), linear-gradient(
-    var(--button-bg1),
-    var(--button-bg2),
-    var(--button-bg3),
-    var(--button-bg4),
-    var(--button-bg5),
-    var(--button-bg6),
-    var(--button-bg7),
-    var(--button-bg8),
-    var(--button-bg9),
-    var(--button-bg10),
-    var(--button-bg11)
-  );
-  border: 0px solid #FFFFFF3B;
-  border-radius: 19px;
-  margin: 0px 20px 0px 0px;
-  padding: 0px var(--button-padding);
-  color: var(--text);
-  transition:
-    --button-bg1 1s,
-    --button-bg2 1s,
-    --button-bg3 1s,
-    --button-bg4 1s,
-    --button-bg5 1s,
-    --button-bg6 1s,
-    --button-bg7 1s,
-    --button-bg8 1s,
-    --button-bg9 1s,
-    --button-bg10 1s,
-    --button-bg11 1s;
-}
-button:hover {
-  --button-bg1: hsl(0.00, 57.2%, calc(40.41% * 1.4));
-  --button-bg2: hsl(5.10, 73.6%, calc(30.69% * 1.4));
-  --button-bg3: hsl(6.80, 75.0%, calc(26.82% * 1.4));
-  --button-bg4: hsl(7.20, 75.9%, calc(24.84% * 1.4));
-  --button-bg5: hsl(8.60, 73.3%, calc(23.85% * 1.4));
-  --button-bg6: hsl(8.50, 71.9%, calc(22.59% * 1.4));
-  --button-bg7: hsl(9.90, 70.2%, calc(21.33% * 1.4));
-  --button-bg8: hsl(10.9, 70.2%, calc(20.16% * 1.4));
-  --button-bg9: hsl(12.3, 69.1%, calc(19.44% * 1.4));
-  --button-bg10: hsl(12.7, 63.6%, calc(21.33% * 1.4));
-  --button-bg11: hsl(15.2, 61.4%, calc(24.75% * 1.4));
-}
-button:before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  display: block;
-  height: 100%;
-  width: var(--button-padding);
-  background: radial-gradient(circle var(--button-satin) at 0% 50%, #2e0000de, transparent);
-}
-button:after {
-  content: '';
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  display: block;
-  height: 100%;
-  width: var(--button-padding);
-  background: radial-gradient(circle var(--button-satin) at 100% 50%, #2e0000de, transparent);
-}
-button:last-of-type {
-  margin: 0px;
+code {
+  background: var(--hljs-attribute);
+  border-radius: 50px;
+  padding: 0px 6px 1px;
+  color: var(--bg);
+  font-size: 13.2px;
+  line-height: 1.32;
 }
 hr {
   width: 91%;
@@ -279,10 +212,134 @@ aside > ul > li > ul > li > ul {
   margin: 6px 0px;
   padding-left: 20px;
 }
+pre code {
+  background: unset;
+  border-radius: 0px;
+  padding: 0px;
+  color: var(--text);
+}
+
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  padding: 8px;
+  background: rgba(255, 0, 50, 0.4);
+  border-bottom: 3px solid #000;
+}
+td {
+  background: rgba(255, 0, 50, 0.1);
+  padding: 8px;
+}
+th:nth-of-type(odd) {
+  background: rgba(255, 0, 50, 0.45);
+}
+tr:nth-of-type(even) td:nth-of-type(odd) {
+  background: rgba(255, 0, 50, 0.25);
+}
+tr:nth-of-type(even) td {
+  background: rgba(255, 0, 50, 0.2);
+}
+td:nth-of-type(odd) {
+  background: rgba(255, 0, 50, 0.15);
+}
 
 /* Utility classes */
 .hidden {
   display: none;
+}
+.button,
+.button:visited {
+  --button-padding: 48px;
+  --button-satin: calc(var(--button-padding) - 12px);
+  --button-bg1: hsl(344.8, 57.2%, 40.41%);
+  --button-bg2: hsl(349.9, 73.6%, 30.69%);
+  --button-bg3: hsl(351.6, 75.0%, 26.82%);
+  --button-bg4: hsl(352.0, 75.9%, 24.84%);
+  --button-bg5: hsl(353.4, 73.3%, 23.85%);
+  --button-bg6: hsl(353.3, 71.9%, 22.59%);
+  --button-bg7: hsl(354.7, 70.2%, 21.33%);
+  --button-bg8: hsl(355.7, 70.2%, 20.16%);
+  --button-bg9: hsl(357.1, 69.1%, 19.44%);
+  --button-bg10: hsl(357.5, 63.6%, 21.33%);
+  --button-bg11: hsl(360.0, 61.4%, 24.75%);
+  --button-transition: 0.5s;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 92px;
+  background: url('/imgs/noise.png'), linear-gradient(
+    var(--button-bg1),
+    var(--button-bg2),
+    var(--button-bg3),
+    var(--button-bg4),
+    var(--button-bg5),
+    var(--button-bg6),
+    var(--button-bg7),
+    var(--button-bg8),
+    var(--button-bg9),
+    var(--button-bg10),
+    var(--button-bg11)
+  );
+  border: 0px solid #FFFFFF3B;
+  border-radius: 19px;
+  margin: 0px 20px 0px 0px;
+  padding: 0px var(--button-padding);
+  color: var(--hljs-attribute);
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  transition:
+    --button-bg1 var(--button-transition) linear,
+    --button-bg2 var(--button-transition) linear,
+    --button-bg3 var(--button-transition) linear,
+    --button-bg4 var(--button-transition) linear,
+    --button-bg5 var(--button-transition) linear,
+    --button-bg6 var(--button-transition) linear,
+    --button-bg7 var(--button-transition) linear,
+    --button-bg8 var(--button-transition) linear,
+    --button-bg9 var(--button-transition) linear,
+    --button-bg10 var(--button-transition) linear,
+    --button-bg11 var(--button-transition) linear;
+}
+.button:hover {
+  --button-bg1: hsl(344.8, 57.2%, calc(40.41% * 1.4));
+  --button-bg2: hsl(349.9, 73.6%, calc(30.69% * 1.4));
+  --button-bg3: hsl(351.6, 75.0%, calc(26.82% * 1.4));
+  --button-bg4: hsl(352.0, 75.9%, calc(24.84% * 1.4));
+  --button-bg5: hsl(353.4, 73.3%, calc(23.85% * 1.4));
+  --button-bg6: hsl(353.3, 71.9%, calc(22.59% * 1.4));
+  --button-bg7: hsl(354.7, 70.2%, calc(21.33% * 1.4));
+  --button-bg8: hsl(355.7, 70.2%, calc(20.16% * 1.4));
+  --button-bg9: hsl(357.1, 69.1%, calc(19.44% * 1.4));
+  --button-bg10: hsl(357.5, 63.6%, calc(21.33% * 1.4));
+  --button-bg11: hsl(360.0, 61.4%, calc(24.75% * 1.4));
+}
+.button:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  height: 100%;
+  width: var(--button-padding);
+  background: radial-gradient(circle var(--button-satin) at 0% 50%, #2e0000de, transparent);
+}
+.button:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 100%;
+  width: var(--button-padding);
+  background: radial-gradient(circle var(--button-satin) at 100% 50%, #2e0000de, transparent);
+}
+.button:last-of-type {
+  margin: 0px;
 }
 
 /* Specific classes */

@@ -30,6 +30,7 @@ async function loadData () {
   const promises = [];
   const markdown = [
     'intro',
+    'getting-started',
     'task-runner-api'
   ];
   markdown.forEach(function (name) {
