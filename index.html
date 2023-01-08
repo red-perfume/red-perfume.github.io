@@ -2,56 +2,170 @@
 <html>
   <head>
     <title>Red Perfume CSS Atomizer</title>
-    <style>
-      body {
-        font-family: sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/custom-hljs-theme.css">
+    <script defer src="/scripts/scroll-to-smooth.min.js"></script>
+    <script defer src="/scripts/marked.min.js"></script>
+    <script defer src="/scripts/highlight.min.js"></script>
+    <script defer src="/scripts/main.js"></script>
   </head>
   <body>
-    <img
-      src="https://avatars.githubusercontent.com/u/72842031?s=400"
-      alt="A photo of a fancy bottle of red perfume"
-    >
-    <h1>Red Perfume</h1>
-    <p>
-      "Red Perfume" is a group of open source projects, primarily focused on Atomizing CSS:
-    </p>
-    <ul>
-      <li>
-        <strong>Red-Perfume-Task-Runner</strong></a>
-        A simplified and focused task runner for websites/webapps.
-      </li>
-      <li>
-        <strong>Red-Perfume-CSS</strong>
-        A library that takes in any arbitrary CSS and returns an atomized version, including a JSON "classMap" for HTML atomization and dynamic JavaScript.
-      </li>
-      <li>
-        <strong>Red-Perfume-HTML</strong>
-        A library that takes in any arbitrary HTML and the JSON "classMap" from Red-Perfume-CSS and atomizes the markup.
-      </li>
-      <li>
-        <strong>Red-Perfume-Desktop</strong>
-        Eventually we plan on creating a desktop app version of Red Perfume as well, written with Vue.js and NW.js.
-      </li>
-      <li>
-        <strong>red-perfume.github.io</strong>
-        This website
-      </li>
-    </ul>
-
-    <p>
-      To contribute, view the project board:
-    </p>
-    <a href="https://github.com/orgs/red-perfume/projects/2/views/1">
-      Project Board
-    </a>
-
-    <section>
-      <h2>Community</h2>
+    <aside>
+      <h1 class="side-title"><a href="#">Red Perfume</a></h1>
       <ul>
-        <li><a href="https://gitter.im/red-perfume/community">Gitter</a> Chatroom</li>
+        <li>
+          <a href="#intro"><strong>Intro to CSS Atomization</strong></a>
+          <ul>
+            <li><a href="#what-is-atomization">What is Atomization?</a></li>
+            <li><a href="#why-should-you-automatically-atomize-your-css">Why should you automatically atomize your CSS?</a></li>
+            <li><a href="#if-the-big-tech-companies-are-doing-it-why-isnt-everyone-else">If the big tech companies are doing it, why isn't everyone else?</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#api"><strong>Library API Documentation</strong></a>
+          <ul>
+            <li>
+              <a href="#task-runner"><code>red-perfume-task-runner</code></a>
+              <ul>
+                <li><a href="#task-runner-guide">Getting started guide</a></li>
+                <li><a href="#task-runner-api">API</a></li>
+                <li><a href="#task-runner-example">Example Usage</a></li>
+                <li><a href="#task-runner-plugins">Plugins</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#css"><code>red-perfume-css</code></a>
+              <ul>
+                <li><a href="#css-api">API</a></li>
+                <li><a href="#css-example">Example Usage</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#html"><code>red-perfume-html</code></a>
+              <ul>
+                <li><a href="#html-api">API</a></li>
+                <li><a href="#html-example">Example Usage</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#tutorials"><strong>Tutorials</strong></a></li>
+        <li class="hidden">
+          <a href="#desktop"><strong>Red Perfume Desktop</strong></a>
+          <ul>
+            <li><a href="#desktop-download">Download</a></li>
+            <li><a href="#desktop-screenshots">Screenshots</a></li>
+            <li><a href="#desktop-tutorials">Tutorials</a></li>
+            <li><a href="#desktop-sys-reqs">Minimum System Requirements</a></li>
+            <li><a href="#desktop-made-with">Made with</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#ecosystem"><strong>Ecosystem</strong></a>
+        </li>
+        <li>
+          <a href="#about"><strong>About</strong></a>
+          <ul>
+            <li><a href="name">Why is it called Red Perfume"?</a></li>
+            <li><a href="contributors">Contributors</a></li>
+            <li><a href="license">License</a></li>
+            <li><a href="coc">Code of Conduct</a></li>
+          </ul>
+        </li>
       </ul>
-    </section>
+
+      <hr />
+
+      <footer>
+        <p>MIT Licensed</p>
+        <p>&copy;2022</p>
+        <p>
+          <a href="https://github.com/red-perfume" target="_blank">
+            <svg class="github-logo" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" /><title>GitHub Logo</title></svg>
+          </a><br>
+          Source on <a href="https://github.com/red-perfume" target="_blank">GitHub</a>
+        </p>
+      </footer>
+    </aside>
+
+    <main>
+      <section>
+        <img
+          src="https://avatars.githubusercontent.com/u/72842031?s=400"
+          alt="A photo of a fancy bottle of red perfume"
+          class="logo"
+        >
+        <h1 class="main-title">Red Perfume</h1>
+        <p>
+          "Red Perfume" is a group of open source projects, primarily focused on Atomizing CSS:
+        </p>
+        <ul>
+          <li>
+            <strong>Red-Perfume-Task-Runner</strong></a>
+            A simplified and focused task runner for websites/webapps.
+          </li>
+          <li>
+            <strong>Red-Perfume-CSS</strong>
+            A library that takes in any arbitrary CSS and returns an atomized version, including a JSON "classMap" for HTML atomization and dynamic JavaScript.
+          </li>
+          <li>
+            <strong>Red-Perfume-HTML</strong>
+            A library that takes in any arbitrary HTML and the JSON "classMap" from Red-Perfume-CSS and atomizes the markup.
+          </li>
+          <li>
+            <strong>Red-Perfume-Desktop</strong>
+            Eventually we plan on creating a desktop app version of Red Perfume as well, written with Vue.js and NW.js.
+          </li>
+          <li>
+            <strong>red-perfume.github.io</strong>
+            This website
+          </li>
+        </ul>
+
+        <p>
+          To contribute, view the project board:
+        </p>
+        <a href="https://github.com/orgs/red-perfume/projects/2/views/1">
+          Project Board
+        </a>
+      </section>
+
+      <hr />
+
+      <section id="intro">
+        <h2>Intro to CSS Atomization</h2>
+      </section>
+
+      <section id="api">
+        <h2>Library API Documentation</h2>
+      </section>
+
+      <section id="tutorials">
+        <h2>Tutorials</h2>
+      </section>
+
+      <section id="desktop">
+        <h2>Red Perfume Desktop</h2>
+      </section>
+
+      <section id="ecosystem">
+        <h2>Ecosystem<</h2>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+      </section>
+
+      <section id="community">
+        <h2>Community</h2>
+        <ul>
+          <li><a href="https://gitter.im/red-perfume/community">Gitter</a> Chatroom</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Fonts can be render blocking, so load them last -->
+    <link rel="stylesheet" href="/styles/fonts.css">
   </body>
 </html>

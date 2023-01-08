@@ -1,0 +1,23 @@
+{
+  "name": "red-perfume-website",
+  "version": "1.0.0",
+  "description": "Website for the Red Perfume project.",
+  "main": "index.html",
+  "scripts": {
+    "start": "node node_modules/npm-free-server/dist/server.js"
+  },
+  "devDependencies": {
+    "npm-free-server": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-perfume/red-perfume.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/red-perfume/red-perfume.github.io/issues"
+  },
+  "homepage": "https://github.com/red-perfume/red-perfume.github.io#readme"
+}

@@ -10,9 +10,14 @@ All work for this project is documented and organized in [this GitHub Project](h
 
 ## Site Map outline
 
-* What is "CSS Atomization"?
-  * Convey visually what the concept of CSS atomization is
-* Library documentation
+* Red Perfume - CSS Atomizer & Optimization
+  * Homepage
+  * link to "getting started"
+* Intro to CSS Atomization
+  * What is Atomization?
+  * Why should you automatically atomize your CSS?
+  * If the big tech companies are doing it, why isn't everyone else?
+* Library API Documentation
   * `red-perfume-task-runner`
     * Getting started guide
     * API
@@ -26,12 +31,15 @@ All work for this project is documented and organized in [this GitHub Project](h
     * Example Usage
   * Tutorials
     * Links to blogs, YouTube videos, dev.to articles, etc, made by the community.
-* Desktop App page
+* Red Perfume Desktop
   * Download Links
   * Demo Video(s)
     * Official demo video(s)
     * Videos from other YouTubers covering Red Perfume Desktop
   * Screenshots
+* Ecosystem
+  * As plugins and tooling are created, they will appear on this page.
 * About
   * "Why is it called Red Perfume"
-* Other parts of the Red Perfume Ecosystem
+  * Contributors
+  * License (MIT)
