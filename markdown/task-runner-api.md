@@ -78,7 +78,7 @@ redPerfume.atomize({
 
 ### API Implementation Status: ALPHA
 
-The documented API is fully implemented and tested. Though there are many edge cases that have not been covered yet (see: [issues](https://github.com/red-perfume/red-perfume/issues)), and some more advanced parts of the **features** yet to be implemented (also: [issues](https://github.com/red-perfume/red-perfume/issues)).
+The documented API is fully implemented and tested. Though there are many edge cases that have not been covered yet (see: [project board](https://github.com/orgs/red-perfume/projects/2)), and some more advanced parts of the **features** yet to be implemented (also: [project board](https://github.com/orgs/red-perfume/projects/2)).
 
 
 ### API Documentation
