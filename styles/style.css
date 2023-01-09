@@ -345,8 +345,9 @@ td:nth-of-type(odd) {
 
 /* Specific classes */
 .logo {
-  max-width: 170px;
-  border-radius: 6px;
+  max-height: 267px;
+  margin: 0px 33px 0px 0px;
+  float: left;
 }
 .main-title,
 .side-title {
