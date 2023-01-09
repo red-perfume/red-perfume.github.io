@@ -32,6 +32,7 @@ async function loadData () {
     'intro',
     'getting-started',
     'task-runner-api',
+    'ecosystem',
     'about'
   ];
   markdown.forEach(function (name) {

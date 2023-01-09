@@ -371,3 +371,7 @@ td:nth-of-type(odd) {
 .github-logo:hover path {
   fill: var(--text-bright);
 }
+.bottom-spacer {
+  display: block;
+  height: 400px;
+}
