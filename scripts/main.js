@@ -31,7 +31,8 @@ async function loadData () {
   const markdown = [
     'intro',
     'getting-started',
-    'task-runner-api'
+    'task-runner-api',
+    'about'
   ];
   markdown.forEach(function (name) {
     promises.push(getAndInsertMarkdown(name));
@@ -46,10 +47,10 @@ function applyHighlightJs () {
   });
 }
 
-function handleSidebarClicks () {
-  const links = Array.from(document.querySelectorAll('aside a'));
+function handleNavigationClicks () {
+  const links = Array.from(document.querySelectorAll('a'));
   links.forEach(function (link) {
-    if (!link.href.includes('github.com')) {
+    if (link.href.includes('#')) {
       link.addEventListener('click', function (evt) {
         evt.preventDefault();
         const hash = evt?.currentTarget?.hash;
@@ -65,7 +66,7 @@ function handleSidebarClicks () {
 async function initializePage () {
   await loadData();
   applyHighlightJs();
-  handleSidebarClicks();
+  handleNavigationClicks();
   scrollToHash();
 }
 
