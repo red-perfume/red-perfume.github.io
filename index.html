@@ -1,14 +1,75 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Global                                                                                             -->
+    <meta charset="utf-8"                                                                                    />
+    <meta http-equiv="X-UA-Compatible"           content="IE=edge"                                           />
+    <meta name="viewport"                        content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Red Perfume CSS Atomizer</title>
-    <link rel="stylesheet" href="/styles/normalize.css">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/custom-hljs-theme.css">
-    <script defer src="/scripts/scroll-to-smooth.min.js"></script>
-    <script defer src="/scripts/marked.min.js"></script>
-    <script defer src="/scripts/highlight.min.js"></script>
-    <script defer src="/scripts/main.js"></script>
+    <meta name="description"                     content="Red Perfume CSS Atomization and Optimzation tooling" />
+    <meta name="keywords"                        content="Red Perfume, CSS, atomization, optimzation, JavaScript, HTML, web development, web design" />
+    <meta http-equiv="Expires"                   content="0"                                                 />
+    <meta name="subject"                         content="Web Development Tooling"                           />
+    <meta name="language"                        content="EN"                                                />
+    <meta name="robots"                          content="index,follow"                                      />
+    <meta name="owner"                           content="The Jared Wilcurt"                                 />
+    <meta name="rating"                          content="General"                                           />
+    <meta name="HandheldFriendly"                content="True"                                              />
+    <link rel="icon"                             href="/favicon.ico"            type="image/x-icon"          />
+    <link rel="shortcut icon"                    href="/favicon.ico"            type="image/ico"             />
+    <link rel="fluid-icon"                       href="/imgs/meta/fluid.png"    type="image/png"             />
+    <!-- Google/Schema.org                                                                                  -->
+    <meta itemprop="name"                        content="Red Perfume CSS Atomizer"                          />
+    <meta itemprop="description"                 content="Red Perfume CSS Atomization and Optimzation tooling" />
+    <meta itemprop="image"                       content="https://red-perfume.github.io/imgs/redperfume.jpg" />
+    <!-- Twitter                                                                                            -->
+    <meta name="twitter:dnt"                     content="on"                                                />
+    <meta name="twitter:card"                    content="summary"                                           />
+    <meta name="twitter:creator"                 content="@TheJaredwilcurt"                                  />
+    <!-- Facebook/Reddit                                                                                    -->
+    <meta property="og:type"                     content="website"                                           />
+    <meta property="og:url"                      content="https://red-perfume.github.io"                     />
+    <meta property="og:title"                    content="XPDA: Cross-Platform Desktop App Development"      />
+    <meta property="og:site_name"                content="XPDA: Cross-Platform Desktop App Development"      />
+    <meta property="og:image"                    content="https://red-perfume.github.io/imgs/redperfume.jpg" />
+    <meta property="og:locale"                   content="en_US"                                             />
+    <meta property="og:description"              content="Red Perfume CSS Atomization and Optimzation tooling" />
+    <!-- Android                                                                                            -->
+    <meta name="theme-color"                     content="#351217"                                           />
+    <meta name="mobile-web-app-capable"          content="yes"                                               />
+    <!-- Microsoft                                                                                          -->
+    <meta name="application-name"                content="Red Perfume"                                       />
+    <meta http-equiv="cleartype"                 content="on"                                                />
+    <meta name="msapplication-navbutton-color"   content="#351217"                                           />
+    <meta name="msapplication-TileColor"         content="#351217"                                           />
+    <meta name="msapplication-square70x70logo"   content="/imgs/meta/mstile01sm.png"                         />
+    <meta name="msapplication-square150x150logo" content="/imgs/meta/mstile02md.png"                         />
+    <meta name="msapplication-wide310x150logo"   content="/imgs/meta/mstile03wd.png"                         />
+    <meta name="msapplication-square310x310logo" content="/imgs/meta/mstile04lg.png"                         />
+    <meta name="skype_toolbar"                   content="skype_toolbar_parser_compatible"                   />
+    <!-- Apple                                                                                              -->
+    <meta name="apple-mobile-web-app-title"      content="Red Perfume"                                       />
+    <meta name="apple-mobile-web-app-capable"    content="no"                                                />
+    <meta name="apple-touch-fullscreen"          content="no"                                                />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"                                       />
+    <meta name="format-detection"                content="telephone=no"                                      />
+    <link rel="apple-touch-icon"             href="/imgs/meta/apl-57.png"   type="image/png" sizes="57x57"   />
+    <link rel="apple-touch-icon-precomposed" href="/imgs/meta/apl-57.png"   type="image/png" sizes="57x57"   />
+    <link rel="apple-touch-icon"             href="/imgs/meta/apl-72.png"   type="image/png" sizes="72x72"   />
+    <link rel="apple-touch-icon-precomposed" href="/imgs/meta/apl-72.png"   type="image/png" sizes="72x72"   />
+    <link rel="apple-touch-icon"             href="/imgs/meta/apl-114.png"  type="image/png" sizes="114x114" />
+    <link rel="apple-touch-icon-precomposed" href="/imgs/meta/apl-114.png"  type="image/png" sizes="114x114" />
+    <link rel="apple-touch-icon"             href="/imgs/meta/apl-144.png"  type="image/png" sizes="144x144" />
+    <link rel="apple-touch-icon-precomposed" href="/imgs/meta/apl-144.png"  type="image/png" sizes="144x144" />
+    <link rel="apple-touch-startup-image"    href="/imgs/meta/apl-str.png"  type="image/png"                 />
+    <!-- Styles/Scripts                                                                                     -->
+    <script defer src="/scripts/scroll-to-smooth.min.js"                    type="text/javascript"   ></script>
+    <script defer src="/scripts/marked.min.js"                              type="text/javascript"   ></script>
+    <script defer src="/scripts/highlight.min.js"                           type="text/javascript"   ></script>
+    <script defer src="/scripts/main.js"                                    type="text/javascript"   ></script>
+    <link rel="stylesheet"                   href="/styles/normalize.css"         type="text/css"            />
+    <link rel="stylesheet"                   href="/styles/style.css"             type="text/css"            />
+    <link rel="stylesheet"                   href="/styles/custom-hljs-theme.css" type="text/css"            />
   </head>
   <body>
     <aside>
