@@ -1,3 +1,7 @@
+const HIDDEN = 'hidden';
+const OPACITY_0 = 'opacity-0';
+const mobileNav = document.getElementById('mobile-nav');
+
 const markdown = [
   'intro',
   'getting-started',
@@ -22,7 +26,7 @@ function cloneSidebar () {
   const title = document.querySelector('.side-title').outerHTML;
   const nav = document.querySelector('aside nav').innerHTML;
   const footer = document.querySelector('aside footer').innerHTML;
-  document.getElementById('mobile-nav').innerHTML = title + nav;
+  mobileNav.innerHTML = title + nav;
   document.getElementById('mobile-footer').innerHTML = footer;
 }
 
@@ -30,9 +34,9 @@ function scrollToHash () {
   setTimeout(function () {
     let smoothScroll = new scrollToSmooth('a[href*="#"]', {
       targetAttribute: 'href',
-      durationRelative: 500,
-      durationMin: 500,
-      durationMax: 5000,
+      durationRelative: 250,
+      durationMin: 150,
+      durationMax: 2500,
       easing: 'easeOutCubic',
       offset: 15
     });
@@ -100,7 +104,7 @@ function handleNavigationClicks () {
         if (hash !== window.location.hash) {
           history.pushState({}, '', (hash || ' '));
         }
-        document.getElementById('mobile-nav').classList.add('hidden');
+        hideMobileNav();
         scrollToHash();
       });
     }
@@ -111,17 +115,29 @@ function fastScrollOnLoad () {
   window.location.hash = window.location.hash;
 }
 
+function hideMobileNav () {
+  mobileNav.classList.add(OPACITY_0);
+  setTimeout(function () {
+    mobileNav.classList.add(HIDDEN)
+  }, 510);
+}
+
+function showMobileNav () {
+  mobileNav.classList.remove(HIDDEN);
+  setTimeout(function () {
+    mobileNav.classList.remove(OPACITY_0);
+  }, 0);
+}
+
 function registerHamburgerMenu () {
   document
     .querySelector('.hamburger-menu')
     .addEventListener('click', function (evt) {
       evt.preventDefault();
-      const nav = document.getElementById('mobile-nav');
-      const HIDDEN = 'hidden';
-      if (nav.classList.contains(HIDDEN)) {
-        nav.classList.remove(HIDDEN);
+      if (mobileNav.classList.contains(HIDDEN)) {
+        showMobileNav()
       } else {
-        nav.classList.add(HIDDEN);
+        hideMobileNav();
       }
     });
 }
