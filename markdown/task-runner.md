@@ -2,6 +2,7 @@
 
 **Subject to change before v1.0.0**
 
+
 ### Task Runner Example
 
 You can point to files or pass strings in directly. Tasks are sequential, the output of one can feed into the input of the next. You can output to file or use lifecycle callback hooks (documented in next section).
@@ -78,9 +79,9 @@ redPerfume.atomize({
 
 ### API Implementation Status
 
-**ALPHA**
+**Status:** ALPHA
 
-The documented API is fully implemented and tested. Though there are many edge cases that have not been covered yet (see: [project board](https://github.com/orgs/red-perfume/projects/2)), and some more advanced parts of the **features** yet to be implemented (also: [project board](https://github.com/orgs/red-perfume/projects/2)).
+The documented API is fully implemented and tested. Though there are many edge cases that have not been covered yet (see: [project board](https://github.com/orgs/red-perfume/projects/2)), and some **features** not yet implemented (also: [project board](https://github.com/orgs/red-perfume/projects/2)).
 
 
 ### Task Runner API Documentation

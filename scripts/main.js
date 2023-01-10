@@ -73,6 +73,7 @@ function makeIdsClickable () {
     const hash = '#' + el.id;
     el.addEventListener('click', function () {
       smoothScroll.scrollTo(hash);
+      history.pushState(null, null, hash);
     });
   });
 }
@@ -93,11 +94,16 @@ function handleNavigationClicks () {
   });
 }
 
+function fastScrollOnLoad () {
+  window.location.hash = window.location.hash;
+}
+
 async function initializePage () {
   await loadData();
   applyHighlightJs();
   makeIdsClickable();
   handleNavigationClicks();
+  fastScrollOnLoad();
   scrollToHash();
 }
 

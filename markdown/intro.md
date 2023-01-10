@@ -121,7 +121,7 @@ When converting the Facebook.com homepage to use automated CSS atomization, they
 
 ## If the big tech companies are doing it, why isn't everyone else?
 
-It's because, before Red-Perfume, there was no easy way to do CSS atomization. It was possible, but only by combining dozens of libraries that weren't designed to interconnect specifically to solve this problem. So you had a lot of "glue" you had to manage, and ultimately needed a deeper knowledge of what kinds of CSS you could and couldn't write, as not everything would work with these systems.
+It's because, before Red-Perfume, there was no easy way to automate CSS atomization. It was possible, but only by combining dozens of libraries that weren't designed to interconnect specifically to solve this problem. So you had a lot of "glue" you had to manage, and ultimately needed a deeper knowledge of what kinds of CSS you could and couldn't write, as not everything would work with these systems.
 
 Red-Perfume is different. Our goal is to simplify this process so that anyone can easily add atomization to their projects. As part of this approach, the entire atomization process is handled by this library, so that all features are added and all bugs are fixed in one place, resulting in a more optimized tool. The API is designed to be super easy, but fully extendible for any pipeline. And we are aiming to support any arbitrary CSS file.
 
