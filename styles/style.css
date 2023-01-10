@@ -419,7 +419,11 @@ td:nth-of-type(odd) {
   display: none;
   width: 34px;
   cursor: pointer;
+  stroke: var(--text-bright);
   z-index: 9;
+}
+.hamburger-menu:hover {
+  stroke: var(--visited);
 }
 #mobile-nav {
   position: fixed;
