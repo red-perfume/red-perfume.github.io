@@ -345,15 +345,23 @@ td:nth-of-type(odd) {
 
 /* Specific classes */
 .logo {
-  max-height: 267px;
+  max-height: 258px;
   margin: 0px 33px 0px 0px;
   float: left;
+}
+aside .logo {
+  display: inline-block;
+  max-height: 41px;
+  margin: 0px 8px 0px 0px;
+  float: unset;
+  vertical-align: -9px;
 }
 .main-title,
 .side-title {
   font-family: var(--great-vibes);
 }
 .main-title {
+  margin-bottom: 24px;
   font-size: 52px;
   letter-spacing: -0.45px;
 }
