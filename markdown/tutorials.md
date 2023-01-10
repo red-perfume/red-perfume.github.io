@@ -1,4 +1,4 @@
-## Tutorials
+# Tutorials
 
 As tutorial and blog posts are created relating to Red Perfume, they will be added here.
 

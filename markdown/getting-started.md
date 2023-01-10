@@ -1,4 +1,4 @@
-## Getting Started
+# Getting Started
 
 1. Install [Node/npm](https://nodejs.org) (lowest supported version not yet known, presumed to work with 12+)
 1. If you do not have a `package.json` in your project run `npm init -y`

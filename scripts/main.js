@@ -20,10 +20,6 @@ function scrollToHash () {
       offset: 15
     });
     smoothScroll.init();
-    let hash = window.location.hash;
-    if (hash) {
-      smoothScroll.scrollTo(hash);
-    }
   }, 350);
 }
 
@@ -72,8 +68,10 @@ function makeIdsClickable () {
   elements.forEach(function (el) {
     const hash = '#' + el.id;
     el.addEventListener('click', function () {
-      smoothScroll.scrollTo(hash);
-      history.pushState(null, null, hash);
+      if (hash) {
+        smoothScroll.scrollTo(hash);
+        history.pushState(null, null, hash);
+      }
     });
   });
 }
