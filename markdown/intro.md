@@ -109,6 +109,8 @@ export function AnExample () {
 };
 ```
 
+<video autobuffer autoplay controls disablepictureinpicture loop muted preload="auto" src="/videos/intro.mp4"><meta itemprop="description" content="A visual representation of the above explanation"></video>
+
 
 ## Why should you automatically atomize your CSS?
 
