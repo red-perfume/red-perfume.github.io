@@ -33,7 +33,9 @@ function getAndInsertMarkdown (name) {
       return response.text();
     })
     .then(function (result) {
-      document.getElementById(name).innerHTML = marked.parse(result);
+      result = marked.parse(result);
+      result = result.split(' id=').join(' class="has-id" id=')
+      document.getElementById(name).innerHTML = result;
     });
 }
 
@@ -49,6 +51,29 @@ async function loadData () {
 function applyHighlightJs () {
   document.querySelectorAll('code[class^="language-"]').forEach(function (el) {
     hljs.highlightElement(el);
+  });
+}
+
+function makeIdsClickable () {
+  const elements = Array.from(document.querySelectorAll('.has-id'));
+  elements.forEach(function (el) {
+    const hash = '#' + el.id;
+    el.setAttribute('data-scrollto', hash);
+  });
+  let smoothScroll = new scrollToSmooth('.has-id', {
+    targetAttribute: 'data-scrollto',
+    durationRelative: 500,
+    durationMin: 500,
+    durationMax: 5000,
+    easing: 'easeOutCubic',
+    offset: 15
+  });
+  smoothScroll.init();
+  elements.forEach(function (el) {
+    const hash = '#' + el.id;
+    el.addEventListener('click', function () {
+      smoothScroll.scrollTo(hash);
+    });
   });
 }
 
@@ -71,6 +96,7 @@ function handleNavigationClicks () {
 async function initializePage () {
   await loadData();
   applyHighlightJs();
+  makeIdsClickable();
   handleNavigationClicks();
   scrollToHash();
 }

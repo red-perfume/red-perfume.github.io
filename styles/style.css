@@ -345,6 +345,15 @@ td:nth-of-type(odd) {
 .button:last-of-type {
   margin: 0px;
 }
+.has-id {
+  position: relative;
+}
+.has-id:hover:before {
+  content: '#';
+  position: absolute;
+  left: -0.8em;
+  color: var(--link);
+}
 
 /* Specific classes */
 .logo {
