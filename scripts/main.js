@@ -1,3 +1,14 @@
+const markdown = [
+  'intro',
+  'getting-started',
+  'task-runner',
+  'css',
+  'html',
+  'tutorials',
+  'ecosystem',
+  'about'
+];
+
 function scrollToHash () {
   setTimeout(function () {
     let smoothScroll = new scrollToSmooth('a[href*="#"]', {
@@ -28,13 +39,6 @@ function getAndInsertMarkdown (name) {
 
 async function loadData () {
   const promises = [];
-  const markdown = [
-    'intro',
-    'getting-started',
-    'task-runner-api',
-    'ecosystem',
-    'about'
-  ];
   markdown.forEach(function (name) {
     promises.push(getAndInsertMarkdown(name));
   });

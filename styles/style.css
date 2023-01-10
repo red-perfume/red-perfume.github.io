@@ -213,6 +213,9 @@ aside > ul > li > ul > li > ul {
   margin: 6px 0px;
   padding-left: 20px;
 }
+h2 code {
+  font-size: 18px;
+}
 pre code {
   background: unset;
   border-radius: 0px;

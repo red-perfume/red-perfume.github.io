@@ -1,8 +1,8 @@
-## Task Runner API
+## `red-perfume-task-runner`
 
 **Subject to change before v1.0.0**
 
-### API Example
+### Task Runner Example
 
 You can point to files or pass strings in directly. Tasks are sequential, the output of one can feed into the input of the next. You can output to file or use lifecycle callback hooks (documented in next section).
 
@@ -76,12 +76,14 @@ redPerfume.atomize({
 ```
 
 
-### API Implementation Status: ALPHA
+### API Implementation Status
+
+**ALPHA**
 
 The documented API is fully implemented and tested. Though there are many edge cases that have not been covered yet (see: [project board](https://github.com/orgs/red-perfume/projects/2)), and some more advanced parts of the **features** yet to be implemented (also: [project board](https://github.com/orgs/red-perfume/projects/2)).
 
 
-### API Documentation
+### Task Runner API Documentation
 
 Top level/global settings.
 
@@ -154,7 +156,7 @@ Key       | Type    | Default     | Description
 `hooks`   | Object  | `{}`        | Lifecycle callback hooks (documented in next section)
 
 
-#### Lifecycle Callback Hooks Example
+### Lifecycle Callback Hooks Example
 
 All the hooks are shown below. **Most users will only use the `afterOutput` hooks as a simple callback to know when something has finished**. Perhaps to pass along the atomized string to another plugin (to minify, or generate a report or something). These hooks are primarily for those writing 3rd party plugins. Or for existing 3rd party libraries to add documentation to their repo on how to combine them with Red Perfume.
 
