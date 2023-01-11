@@ -114,9 +114,9 @@ export function AnExample () {
 
 ## Why should you automatically atomize your CSS?
 
-During the atomization process, we are essentially looking for patterns and reducing repetition. The end result is that you send much less code. It is all highly dependent on the codebase, but most save around 60%-80%. If you are already pre-atomizing your code, with a tool like Tailwind, then expect to see savings closer to 10-20%. Red Perfume will always do a better job of atomizing your code than if you try to do it by hand, so you can feel free to write your code in any style you want, with any framework, and with any tooling.
+During the atomization process, we are essentially looking for patterns and reducing repetition. The end result is that you send much less code. It is all highly dependent on the codebase, but most save around 60%-80%. If you are already pre-atomizing your code, with a tool like Tailwind, then expect to see savings closer to 10-20%. Red Perfume will always do a better job of atomizing your code than if you try to do it by hand, so you can feel free to write your code in any style you want, with any framework, methodology, paradigm, or tooling.
 
-When converting the Facebook.com homepage to use automated CSS atomization, they found it [reduced their homepage CSS by **80%**](https://engineering.fb.com/web/facebook-redesign). In fact, most major tech websites (Google, Twitter, Facebook) employ this automated optimization technique.
+When converting the *Facebook.com* homepage to use automated CSS atomization, they found it [reduced their homepage CSS by **80%**](https://engineering.fb.com/web/facebook-redesign). In fact, most major tech websites (Google, Twitter, Facebook) employ this automated optimization technique.
 
 
 ## If the big tech companies are doing it, why isn't everyone else?
@@ -125,4 +125,4 @@ It's because, before Red-Perfume, there was no easy way to automate CSS atomizat
 
 Red-Perfume is different. Our goal is to simplify this process so that anyone can easily add atomization to their projects. As part of this approach, the entire atomization process is handled by this library, so that all features are added and all bugs are fixed in one place, resulting in a more optimized tool. The API is designed to be super easy, but fully extendible for any pipeline. And we are aiming to support any arbitrary CSS file.
 
-Currently Red-Perfume is a work in progress, so simple CSS works fine, but more advanced CSS isn't supported yet. But we're working hard to support all of the CSS spec.
+Currently Red-Perfume is a work in progress, so simple CSS works fine, but more advanced CSS isn't supported yet. But we're [working hard to support all of the CSS spec](https://github.com/orgs/red-perfume/projects/2).
