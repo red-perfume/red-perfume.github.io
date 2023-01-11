@@ -204,7 +204,7 @@ aside hr:after {
               -4px 0px 0px var(--hljs-bg);
 }
 aside ul {
-  padding-left: 15px;
+  padding-left: 21px;
 }
 aside > ul > li {
   list-style: none;
