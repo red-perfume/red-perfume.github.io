@@ -70,7 +70,7 @@
   --hljs-text: hsl(324, 70%, 76%);
   --hljs-variable: var(--visited);
   --sans-serif: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'PT Sans', 'Open Sans', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  --serif: 'Droid Serif', 'Bodoni MT', 'Baskerville Old Face', 'Book Antiqua', 'Times New Roman', serif;
+  --serif: 'Droid Serif', 'Bodoni MT', 'Baskerville Old Face', 'Book Antiqua', serif;
   --source-sans-pro: 'Source Sans Pro', var(--sans-serif);
   --great-vibes: 'Great Vibes', 'Brush Script MT', var(--source-sans-pro);
 }
