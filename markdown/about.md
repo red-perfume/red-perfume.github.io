@@ -14,7 +14,7 @@ Outside of our industry jargon, "Atomizer" already exists as a word.
 
 Though actual atomizers themselves have no consistent size, design, color, or shape. So there is no iconic image that represents them.
 
-<img src="/imgs/atomizer-comparison.jpg" alt="Example of several atomizers of differnt size, shape, color and design">
+<img src="/imgs/atomizer-comparison.jpg" alt="Example of several atomizers of differnt size, shape, color and design" width="859" height="421">
 
 And though perfume bottles can also come in many shapes, colors, sizes and designs, they are still recognizable as perfume bottles.
 
