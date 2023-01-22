@@ -23,6 +23,7 @@ And though perfume bottles can also come in many shapes, colors, sizes and desig
 
 * **Library creation, design, maintenance** - The Jared Wilcurt
 * **Library AST Manipulation** - Alex Daigre, The Jared Wilcurt, Gwen Faraday
+* **Task Runner Library** - The Jared Wilcurt, Aslam Doctor
 * **Logo** - The Jared Wilcurt, Jason Williams, ngeshlew
 * **Project Management** - The Jared Wilcurt
 * **Website design/content** - The Jared Wilcurt
