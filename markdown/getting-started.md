@@ -3,7 +3,7 @@
 1. Install [Node/npm](https://nodejs.org) (lowest supported version not yet known, presumed to work with 12+)
 1. If you do not have a `package.json` in your project run `npm init -y`
 1. `npm install --save-dev red-perfume`
-1. `npm set-script atomize "node ./atomize.js"`
+1. `npm pkg set scripts.atomize="node ./atomize.js"`
 1. Create a file called `atomize.js` and set up Red Perfume in it for your project (example below)
 1. Then run `npm run atomize`
 
