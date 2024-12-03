@@ -110,7 +110,7 @@ redPerfume.atomize({ tasks: [{ uglify, styles, markup, scripts, hooks }] });
 
 Key       | Type    | Default     | Description
 :--       | :--     | :--         | :--
-`uglify`  | Boolean | `false`     | If `false` the atomized classes, and all references to them, are long (`.rp__padding__--COLOR12px`). If `true` they are short (`.rp__b5p`).
+`uglify`  | Boolean | `false`     | If `false` the atomized classes, and all references to them, are long (`.rp__padding__--COLON12px`). If `true` they are short (`.rp__b5p`).
 `styles`  | Object  | `undefined` | CSS settings. API below
 `markup`  | Array   | `undefined` | HTML settings. An array of objects with their API defined below
 `scripts` | Object  | `undefined` | JS settings. API below
